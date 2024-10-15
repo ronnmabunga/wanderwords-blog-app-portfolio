@@ -139,7 +139,7 @@ export default function App() {
                 if (foundAuthor) {
                     foundAuthor.posts.push(post);
                 } else {
-                    authors.push({ _id: post.posterId, email: post.posterEmail, posts: [] });
+                    authors.push({ _id: post.posterId, email: post.posterEmail, posts: [post] });
                 }
             });
             setAuthors(authors);
