@@ -33,23 +33,21 @@ export default function AuthorView() {
             <div className="overlayed-section login-section ">
                 <img src="/images/login.webp" alt="Posts" className="image-overlay" />
                 <div className="section-content row d-flex justify-content-center min-vh-100 p-5">
-                    <Container>
-                        <Card className="p-5 m-3">
-                            <Card.Title className="pt-4">
-                                <h1>{author.email}</h1>
-                            </Card.Title>
-                            <Card.Subtitle>Post Count: {author.posts.length}</Card.Subtitle>
-                            <Card.Body>
-                                {author.posts !== null && author.posts !== undefined && author.posts.length !== 0
-                                    ? author.posts.map((post) => (
-                                          <div className="col-12" id={"post-" + post._id} key={post._id} md={3}>
-                                              <PostCardPreview post={post} />
-                                          </div>
-                                      ))
-                                    : "No posts yet!"}
-                            </Card.Body>
-                        </Card>
-                    </Container>
+                    <Card className="p-5">
+                        <Card.Title className="pt-4">
+                            <h5>{author.email}</h5>
+                        </Card.Title>
+                        <Card.Subtitle>Post Count: {author.posts.length}</Card.Subtitle>
+                        <Card.Body className="p-0 m-1">
+                            {author.posts !== null && author.posts !== undefined && author.posts.length !== 0
+                                ? author.posts.map((post) => (
+                                      <div id={"post-" + post._id} key={post._id} md={3}>
+                                          <PostCardPreview post={post} />
+                                      </div>
+                                  ))
+                                : "No posts yet!"}
+                        </Card.Body>
+                    </Card>
                 </div>
             </div>
         </section>

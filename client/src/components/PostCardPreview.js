@@ -29,7 +29,7 @@ export default function PostCardPreview({ post }) {
         }
     }, [showDeleteButton, showEditButton]);
     return (
-        <Card className="p-5 m-3">
+        <Card className="p-2">
             <Card.Title className="pt-4">
                 <Link className="supressed-link" to={"/posts/" + post._id}>
                     {post.title}

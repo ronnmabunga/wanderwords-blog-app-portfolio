@@ -25,7 +25,7 @@ export default function MyPosts() {
                                 <h2>Blog Posts:</h2>
                             </div>
                             <div className="col-4 col-lg-2">
-                                <Link className="btn btn-dark btn-outline-light supressed-link" to={"/posts/new"}>
+                                <Link className="btn btn-dark btn-outline-light" to={"/posts/new"}>
                                     New Post
                                 </Link>
                             </div>
