@@ -1,0 +1,8 @@
+{
+    "url": "https://wanderwords-blog-app-portfolio.vercel.app",
+    "endpoints": {
+        "register": "/register",
+        "login": "/login",
+        "posts": "/posts"
+    }
+}
